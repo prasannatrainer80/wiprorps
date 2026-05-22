@@ -1,0 +1,96 @@
+Web Application : These are the applications, that which are to be called from various places rather than where they are created. 
+
+If you want to make any distributed or robust applications, 
+then we need the help of web applications. 
+
+You can create web applications in 2 ways as 
+
+(i) Scripting Languages
+
+(ii) Programming Languages 
+
+Difference between scripting languages and programming languages 
+_________________________________________________________________
+
+Scripting Languages are languages, that which are interpreted, during runtime they takes lot of time to execute.
+
+Programming Languages are languages that which are compiled first, during runtime they takes very less time to execute. 
+
+In Web applications, we can implement 
+
+
+
+
+	(i) Client-Side Scripting : Enables you to access the application from same system
+
+	  No Network Traffic
+
+	  Execution will be faster 
+
+	(ii) Server-Side Scripting : Enables you to access the application from the server
+
+	   Network traffic is high
+
+	   A bit slower 
+
+*** Any intranet based application w.r.t. No Security please opt for client-side Scripting ***
+
+*** Any internet based application w.r.t. Min. Security, please opt for both client-side/server-side scripting ***
+
+*** Any internet based application w.r.t. High Security, please opt for server-side scripting ***
+
+HTML (HyperText Markup Language) 
+
+which used to create any sample web pages.
+
+To start with HTML, we need to use
+
+<html>
+
+</html> 
+
+<head>
+</head> : Used to define the global content for the given page.
+
+<title> 
+</title> : Used to display heading on title bar. 
+
+<body>
+</body> : Contains the actual data. 
+
+<p>: Used to start new paragraph 
+
+<pre> Used  display data in pre-defined format.
+
+Definition Language : Used to display defintions and 
+answers 
+
+To start with Definition Language
+
+<dl>
+</dl>
+
+<dt> : Definition Term
+
+<dd> : Definition Description 
+
+You can add images to the page, by using 
+
+<img /> tag
+
+<img src="imagename" height width /> 
+
+Anchor tag : Used to create hyperlinks to the given page
+
+<a href="target_page"> Display Text</a>
+
+
+
+
+
+
+
+
+
+
+
