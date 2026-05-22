@@ -151,6 +151,55 @@ To add the page to the frameset, use
 
 <frame src="filename" /> 
 
+CSS (Cascading Style Sheet) 
+
+Allows you to implement cosmatic changes in the given page. 
+
+If you want to implement look and feel for given html page, then we need the help of CSS
+
+There are various types of stylesheets as
+
+1) Inline : To be defined the in tag using style property.
+
+2) Internal : To be defined in the <head> tag, and once we define properties they are applied automatically.
+
+3) External 
+
+<div> : used to divide the page into multiple partitions
+
+Example : My Page contains 
+
+HTML 5 contains some semantic HTML tags, 
+
+means describes the meaning of the content clearly for 
+
+browsers
+developers
+search engines
+
+1) <header> : Used to represent Logo/website title/navigation menu/
+search bar/heading elements 
+
+2) <footer> : Used to define bottom section webpage
+
+mostly copyright/contact details etc
+
+3) <section> : Used for grouping of related content
+
+4) <article> : Represents independent self-containerd content
+
+
+
+1) My Details
+
+2) My Personal Details
+
+3) My Job Details
+
+
+
+
+
 
 
 
