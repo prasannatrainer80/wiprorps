@@ -84,6 +84,85 @@ Anchor tag : Used to create hyperlinks to the given page
 
 <a href="target_page"> Display Text</a>
 
+Ordered List : Used to display data in ordered format w.r.t
+
+	Numbers
+	Alphabets
+	Roman_Numbers
+
+You can define ordered list, using <ol> </ol>
+
+All items in this are written by <li> </li> 
+
+If you want to display data w.r.t. Bullets and diff
+symbols using unordered list, as (ul)
+
+Forms : Allows you accept input from the keyboard.
+
+You can define forms as
+
+<form name="formName">
+</form>
+
+<label> : used to display headings 
+
+<label> Login Page</label>
+
+<input type="text" />TextBox
+
+<input type="button" /> Button for actions
+
+<input type="submit" /> By default it acts as click event even works on click or press enter button
+
+<input type="reset" /> Used to clear the form. 
+
+<input type="password" /> 
+
+
+Tables allows you to display data w.r.t. Rows and Columns 
+
+You can define tables by using
+
+<table>
+</table>
+
+<table border="3">
+</table>
+
+<tr> 
+</tr>  : Used to add new row to the particular table.
+
+<th>
+</th> : Used to add heading to the table cell
+
+<td>
+</td> : Used to add data to the table cell
+
+colspan : Used to merge no.of columns into a single column
+
+rowspan : used to merge no.of rows into a single row
+
+Frames : Allows you divide the page into partitions
+and each partition we need to add the different pages.
+
+<frameset rows/cols with percentage>
+
+To add the page to the frameset, use
+
+<frame src="filename" /> 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
