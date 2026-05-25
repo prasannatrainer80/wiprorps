@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+            @keyframes drop-in 
+            {
+              from 
+              {
+                transform:
+                  rotate(-80deg) translateY(-100%);
+                opacity: 0;
+              }
+              to 
+              {
+                transform:
+                  rotate(0deg) translateY(0%);
+                opacity: 1;
+              }
+            }         
+            .box 
+            {
+                font-size: 32pt;
+                font-weight: bold;
+              animation: drop-in 5000ms;
+              animation-iteration-count: infinite;
+            }
+          </style>
+          
+    </head>
+<body> 
+    <div class="box">
+        Welcome to CSS Programming...
+    </div>
+</body>
+</html>
