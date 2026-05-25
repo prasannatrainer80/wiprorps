@@ -1,0 +1,160 @@
+External CSS : We can write code in .css file and can be called in multiple pages.
+
+Assume, we need some of html files to be fragmented 
+same css styling, then we need the help of external css.
+
+how to make external css 
+
+create a file as css1.css
+
+p 
+{
+    color : blue;
+}
+
+div 
+{
+    color: orange;    
+}
+span 
+{
+    color : purple;
+}
+
+Assume, we need to call that in css1.html file, then
+
+use <link /> 
+
+<link type="text/css" rel="stylesheet" href="css1.css" />
+
+Then the css file styling can be applied to specific html pages
+
+
+In CSS3, we have concept of animations, which allows you to translate an object/text/image from one form to another form. 
+
+To implement animations, we need to use @keyframes
+
+this rule defines animations lets you specify how an 
+element's style should change over the time.
+
+@keyframes animation_name {
+   specify the properies
+}
+
+you can use the animation in any html tag specified 
+
+If you want to make any shadow images etc...
+
+then we need to -webkit 
+
+it is a browser specific property used to format html tags w.r.t. animations 
+
+Grid 
+
+CSS Grid is a multi-dimensiona system used to 
+create data w.r.t. rows and columns. 
+
+Without <table> concept we need to represent 
+data in rows and columns and automatically 
+identify the layout borders.
+
+Grid arrage items easily without using compliated positions
+
+Where to use Grids 
+___________________
+
+	-> Website Layouts
+	-> Dashboard Designs
+	-> Gallery Layouts
+	-> Responsive Pages
+	-> 
+
+to enable gird 
+
+assume we have division class as wipro
+
+<div class="wipro">
+</div>
+
+div.wipro {
+   display:grid;
+}
+
+You can specify rows and columns of a grid as
+
+grid-template-columns
+grid-template-rows 
+
+Flex 
+_____
+
+Felxbox (Flexible Box Layout) is a CSS layout system used to arrange items in 
+
+rows
+columns
+responsive way
+
+to enable flexbox, we need to use
+
+<div class="wipro">
+</div>
+
+div.wipro {
+    display:flex;
+}
+
+Media Queries : 
+________________
+
+Used to make any website as tailored and responsive
+This enables you to design the page as per the screen 
+resolution. 
+
+Example : Take gmail page, as it comes different
+in laptop and different in Mobile. 
+
+As per mobile screen size automatically app adjusts
+the boundaries. 
+
+They apply different CSS styles based on :
+___________________________________________
+
+	-> screen size
+	-> device width
+	-> height
+	-> orientation
+	-> resolution
+
+You can define media queries using 
+
+@media tag. 
+
+example : 
+
+@media(max-width:600px){
+    body {
+       color : red;
+    }
+}
+
+The adv. with media queries website look and feel will not lost
+as the access device getting changed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
