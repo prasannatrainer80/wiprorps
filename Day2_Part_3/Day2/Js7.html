@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var result="";
+                if(frmAttendance.chkHitasree.checked==true) {
+                    result+="Hitasree is Present Today...".fontcolor("green");
+                     result+="<br/>";
+                } else {
+                    result+="Hitasree is Absent Today...".fontcolor("red");
+                    result+="<br/>";
+                }
+                 if(frmAttendance.chkAmar.checked==true) {
+                    result+="Amar is Present Today...".fontcolor("green");
+                     result+="<br/>";
+                } else {
+                    result+="Amar is Absent Today...".fontcolor("red");
+                     result+="<br/>";
+                }
+                 if(frmAttendance.chkSunil.checked==true) {
+                    result+="Sunil is Present Today...".fontcolor("green");
+                     result+="<br/>";
+                } else {
+                    result+="Sunil is Absent Today...".fontcolor("red");
+                     result+="<br/>";
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmAttendance">
+        <center>
+            <input type="checkbox" name="chkHitasree" onchange="show()" /> Hitasree 
+            <br/>
+            <input type="checkbox" name="chkAmar" onchange="show()" /> Amarnath
+            <br/>
+            <input type="checkbox" name="chkSunil" onchange="show()" /> Sunil 
+            <hr/>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

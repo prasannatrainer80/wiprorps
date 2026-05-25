@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            const show = () => {
+                var res = "";
+                var names = new Array("Dharma Teja","Mounish","Sakthi","Sripada","Sunil","Hitasree");
+                // var names = ["Dharma Teja","Mounish","Sakthi","Sripada","Sunil","Hitasree"];
+                // for(var v in names) {
+                //     res+=names[v]+"<br/>";
+                // }
+                names.forEach(x => {
+                    res+=x;
+                    res+="<br/>";
+                })
+                document.getElementById("result").innerHTML = res;
+            }
+            
+        </script>
+    </head>
+<body onload="show()">
+    <span id="result"></span>
+</body>
+</html>
