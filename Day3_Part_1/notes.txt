@@ -1,0 +1,164 @@
+What is Asynchronous Communication 
+
+Async/Await in javascript allows you to write asynchronous code in a clean, synchronous-like manner, making it easier to read, understand nd maintain while working with promises. 
+
+-> Once you run the asynchronous code, it returns a promise value
+
+A promise is a value to be returned after some operation,
+it returns 2 major values known as 
+
+	(I) resolve
+
+	(ii) reject 
+
+Assume, we are accessing json data from any website then
+if request served perfectly then it returns resolve
+
+if request contains some error, then it returns reject 
+
+How to create an async function 
+
+const function_name async = () => {
+
+}
+
+ensures that the function can be accessable by multiple requests parllely
+
+Makes async code easier to read and maintain
+Does not block the main execution thread
+Always returns a promise
+
+Await keyword
+
+pauses the execute of async function until promise resolved or rejected. It can be written in async function, making it easier to read and manage
+
+const function_name = async () => {
+   let res = await function(value);
+   alert(res);
+} 
+
+___________________________________________________________
+
+What is Angular
+
+	Angular is a javascript frameworks that which allows
+you to create any web application (Standalone, Distributed
+or Enterprise) 
+
+Angular implemented on typescript.
+
+
+What is SPA (Single Page Application) 
+
+A webapplication that which interacts with user by dynamically rewriting the current page rather than loading the entire new pages
+
+The best example for SPA is Google Maps/Gmail Page 
+
+Angular implemented on top of nodejs platform. 
+
+To start with angular, install nodejs, and in command prompt
+
+give the command as
+
+npm install -g @angular/cli 
+
+-g as global folder. 
+
+c:/users/user_name/appdata/roaming/npm 
+
+How to create an angular project, 
+
+ng new project_name
+
+ng new HelloWorld
+
+Once project created, all dependencies will be loaded. 
+
+package.json file contains all the dependencies required for the current project. 
+
+tsconfig.json file contains all typescript settings to be need for 
+running the project.
+
+Component : The major part of the angular development are components. 
+Once you create any project by default one component created known as
+
+app component, it contains major files as
+
+app.ts  => Contains the core business logic
+app.html => Contains relevant html code for the above ts
+app.spec.ts => Contains any test cases to be written on that.
+
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+
+Component can be identified by directive known as
+
+@Component 
+
+selector : ensures with which we can access the particular component.
+
+templateUrl : Ensures what is the relevant HTML for the ts file specified. 
+
+Once you start the application, by default app.html what ever code is there that gets executed. 
+
+How to create a component 
+
+ng g c -> this command used to create a user-defined component. 
+
+ng g c First -> Then it creates one component with name First (Folder also be created) 
+
+In that folder default, it creates 4 files known as 
+
+First.ts
+First.html
+First.spec.ts
+First.css
+
+Now once you finish coding, to run the component, copy the selector from First.ts file and in app.html file render that as html tag.
+
+Assume, the select is app-first, then in app.html write that as
+
+<app-first> </app-first>
+
+How to implement Data Binding 
+
+There are various types of data types of databinding known as
+
+1) Interpolation {{ }} used to print any value
+
+2) Two-Way Binding [(ngModel)] For this we need to import
+CommonModule,FormsModule in imports section.
+
+3) Event-Binding : Used to bind events like (click),
+(change) etc..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
