@@ -6,11 +6,13 @@ import { Third } from './third/third';
 import { TwoWay } from './two-way/two-way';
 import { EventDemo } from './event-demo/event-demo';
 import { Calc } from './calc/calc';
+import { CaseExample } from './case-example/case-example';
+import { EmployShow } from './employ-show/employ-show';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,First,Second,Third,TwoWay,
-    Calc,
+    Calc,CaseExample,EmployShow,
     EventDemo],
   templateUrl: './app.html',
   styleUrl: './app.css'
