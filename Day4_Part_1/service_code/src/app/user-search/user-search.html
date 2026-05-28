@@ -1,0 +1,18 @@
+<p>user-search works!</p>
+Id : 
+<input type="number" name="id" [(ngModel)]="id" />
+<br/><br/>
+<input type="button" value="Search" (click)="show()" />
+<hr/>
+Id : 
+{{(userFound | async)?.id}}<br/>
+Name : 
+{{(userFound | async)?.name}}<br/>
+UserName : 
+{{(userFound | async)?.username}}<br/>
+Email : 
+{{(userFound | async)?.email}}<br/>
+Phone : 
+{{(userFound | async)?.phone}}<br/>
+Website : 
+{{(userFound | async)?.website}}<br/>
