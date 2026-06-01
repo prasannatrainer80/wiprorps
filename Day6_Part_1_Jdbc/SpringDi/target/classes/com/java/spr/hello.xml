@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="beanHello" class="com.java.spr.HelloImpl">
+	<property name="welcomeNote" value="Welcome to Wipro" />
+	<property name="greeting" value="Thank You For Joining Training Mr/Miss/Mrs" />
+	<property name="endNote" value="All the Best..." />
+</bean>
+</beans>
