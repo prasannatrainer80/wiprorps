@@ -66,4 +66,41 @@ public class EmployDaoImpl implements EmployDao {
 		return employList.get(0);
 	}
 
+	@Override
+	public String addEmploy(Employ employ) {
+		String cmd = "Insert into Employ(empno,name,gender,dept,desig,basic) "
+				+ "values(?,?,?,?,?,?)";
+		jdbcTemplate.update(cmd, new Object[] {
+				employ.getEmpno(),
+				employ.getName(),
+				employ.getGender().toString(),
+				employ.getDept(),
+				employ.getDesig(),
+				employ.getBasic()
+		});
+		return "Employ Record Inserted...";
+	}
+
+	@Override
+	public String updateEmploy(Employ employ) {
+		String cmd = "Update Employ set Name=?, Gender=?, Dept=?, "
+				+ "Desig=?, Basic=? Where empno = ?";
+		jdbcTemplate.update(cmd, new Object[] {
+				employ.getName(),
+				employ.getGender().toString(),
+				employ.getDept(),
+				employ.getDesig(),
+				employ.getBasic(),
+				employ.getEmpno()
+		});
+		return "Employ Record Updated...";
+	}
+
+	@Override
+	public String deleteEmploy(int empno) {
+		String cmd = "Delete from Employ where empno = ?";
+		jdbcTemplate.update(cmd, new Object[] {empno});
+		return "Employ Record Deleted...";
+	}
+
 }
