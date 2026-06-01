@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+  <context:annotation-config />
+
+	<bean id="jobDetails" class="com.java.spr.JobDetails">
+			<property name="job" value="Software Engineer" />
+			<property name="company" value="Wipro" />
+			<property name="location" value="Bangalore" />
+	</bean>
+	<bean id="personHitasree" class="com.java.spr.Person">
+		<property name="id" value="1" />
+		<property name="name" value="Hitasree" />
+	<property name="family">
+		<bean class="com.java.spr.Family">
+			<property name="city" value="Bangalore" />
+			<property name="state" value="KA" />
+		</bean>
+	</property>
+</bean>
+<bean id="personPankaj" class="com.java.spr.Person">
+	<property name="id" value="2" />
+	<property name="name" value="Pankaj" />
+	<property name="family">
+		<bean class="com.java.spr.Family">
+			<property name="city" value="Delhi" />
+			<property name="state" value="Delhi" />
+		</bean>
+	</property>
+</bean>
+<bean id="personKruthi" class="com.java.spr.Person">
+	<property name="id" value="3" />
+	<property name="name" value="Kruthi" />
+	<property name="family">
+		<bean class="com.java.spr.Family">
+			<property name="city" value="Lucknow" />
+			<property name="state" value="UP" />
+		</bean>
+	</property>
+</bean>
+</beans>
