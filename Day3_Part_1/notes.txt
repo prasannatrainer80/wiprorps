@@ -137,7 +137,15 @@ CommonModule,FormsModule in imports section.
 3) Event-Binding : Used to bind events like (click),
 (change) etc..
 
+Routing Ensures, if you want to redirect to any target component, we can implement Routing.
 
+For Routing, we need to import RouterModule
+
+const routes : Routes =
+[
+  {path:'',component:Menu},  -- ensures it is a default component
+  {path:'first',component:First}
+}
 
 
 

@@ -1,0 +1,10 @@
+http://localhost:8811/mult/12/5
+http://localhost:8811/sum/12/5
+http://localhost:8811/sub/12/5
+
+http://localhost:8811/
+http://localhost:8811/company
+http://localhost:8811/trainer
+
+http://localhost:8811/searchEmploy/1
+http://localhost:8811/showemploy
