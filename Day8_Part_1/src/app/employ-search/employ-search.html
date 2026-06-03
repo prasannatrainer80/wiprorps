@@ -1,0 +1,15 @@
+<p>employ-search works!</p>
+Employ Number : 
+<input type="number" name="empno" [(ngModel)]="empno" /> <br/><br/>
+<input type="button" value="Search" (click)="show()" />
+<hr/>
+Employ Name : 
+{{(employFound | async)?.name}} <br/>
+Gender : 
+{{(employFound | async)?.gender}} <br/>
+Department : 
+{{(employFound | async)?.dept}} <br/>
+Designation : 
+{{(employFound | async)?.desig}} <br/>
+Basic : 
+{{(employFound | async)?.basic}} <br/>
