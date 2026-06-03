@@ -1,0 +1,67 @@
+<p>place-order works!</p>
+<form #orderForm="ngForm" (submit)="placeOrder(orderForm)">
+
+    <!-- Vendor Dropdown -->
+    <label>Select Vendor :</label>
+
+    <select name="venId"
+            [(ngModel)]="orders.venId">
+
+        <option value="">-- Select Vendor --</option>
+
+        <option *ngFor="let vendor of (vendors | async)"
+                [value]="vendor.venId">
+
+            {{ vendor.venName }}
+
+        </option>
+
+    </select>
+
+    <br/><br/>
+
+    <!-- Menu Dropdown -->
+    <label>Select Menu :</label>
+
+    <select name="menId"
+            [(ngModel)]="orders.menId">
+
+        <option value="">-- Select Menu --</option>
+
+        <option *ngFor="let menu of (menus | async)"
+                [value]="menu.menId">
+
+            {{ menu.menItem }}
+
+        </option>
+
+    </select>
+    
+    <br/><br/>
+    <!-- Wallet Dropdown -->
+    <label>Select Wallet :</label>
+
+    <select name="menId"
+            [(ngModel)]="orders.walSource">
+
+        <option value="">-- Select Menu --</option>
+
+        <option *ngFor="let wallet of (wallets | async)"
+                [value]="wallet.walSource">
+
+            {{ wallet.walSource }}
+
+        </option>
+
+    </select>
+    <br/><br/>
+    <label>Order Quantity : </label>
+    <input type="number" name="ordQuantity"
+        [(ngModel)]="orders.ordQuantity" />
+
+    <br/><br/>
+    <label>Order Comments : </label>
+    <input type="text" name="ordComments" [(ngModel)]="orders.ordComments" />
+    <br/><br/>
+    <input type="submit" value="Place Order" />
+</form>
