@@ -1,0 +1,13 @@
+<p>menu works!</p>
+<a [routerLink]="['/menu',{outlets:{'wipro':['employshow']}}]">Employ Show</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets:{'wipro':['employsearch']}}]">Employ Search</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets:{'wipro':['employadd']}}]">Add Employ</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets:{'wipro':['employupdate']}}]">Update Employ</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets:{'wipro':['employdelete']}}]">Delete Employ</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<hr/>
+<router-outlet name="wipro"></router-outlet>
