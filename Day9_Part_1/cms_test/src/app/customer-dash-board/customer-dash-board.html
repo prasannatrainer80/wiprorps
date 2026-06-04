@@ -1,0 +1,13 @@
+<p>customer-dash-board works!</p>
+<a [routerLink]="['/customerDashBoard',{outlets:{'infinite':['customerInfo']}}]">Customer Info</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/customerDashBoard',{outlets:{'infinite':['customerWallet']}}]">Customer Wallet</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/customerDashBoard',{outlets:{'infinite':['customerOrders']}}]">Customer Orders</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/customerDashBoard',{outlets:{'infinite':['customerPendingOrders']}}]">Customer Pending Orders</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/customerDashBoard',{outlets:{'infinite':['placeOrder']}}]">Place Order</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<hr/>
+<router-outlet name="infinite"></router-outlet>
