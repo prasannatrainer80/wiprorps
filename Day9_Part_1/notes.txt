@@ -1,0 +1,90 @@
+What is Testing :
+
+Testing is a process in which defects are identified and 
+subjected for rectification, at last we need to deliver the defect-
+free application to the client.
+
+Testing is essential aspect of software development that 
+ensures the reliability and functionality of your application.
+
+1) Defect : If tester identifies something known as defect
+
+2) Bug : If programmer accepts the defect known as bug. 
+
+*** All defects are not bugs, but all bugs are defects ***
+
+3) Error : If programmer identifies mistake in code known as
+		error.
+
+4) Fatal : If client identifies mistake known as fatal.
+
+Unit Testing : Ensures each and every unit of the code needs to be tested perfectly...
+
+In Angular, we can implement unit testing using karma jasmine/chai etc...
+
+Unit Testing in angular involves testing individual components, services, pipes or directives in isolation to ensure they behave correctly. 
+
+By Writing unit tests, developers can catch bugs early, make refactoriing safer, and ensure that each part of the application works as intented.
+
+You can implement Unit Testing using as
+
+1) Jasmine : It is a popular behaviour-driven development
+(BDD) framework for testing js code. It provides clean and simple syntax for writing tests, known as "specs" which are easy to read and understand. Jasmine is widely used in Angular applications due to its seamess integration features.
+
+It contains various blocks as 
+
+   (I) Describe and It blocks : Jasmine uses describe blocks to group related tests and blocks to define individual test cases. 
+
+  (ii) Matches : It contains various matcher methods as toBe, toEquals, toContain etc... to make assertions in your tests.
+
+ (iii) Spies : Jasmines allows you to spy on methods and track their calls and arguments, which is useful for testing interactions and dependencies 
+
+Assume, you need to test AppComponent, then 
+
+	describe('AppComponent", () => {
+	  it('should have a defined title', () => {
+		const title = component.title;
+	        expect(title).toBeDefined();
+	  });
+        });
+
+2) Karma/Chai
+
+3) TestBed : It is a testing utility provided by angular for configuring and initializing the env for unit tests, it allows you to create and configure components, services and modules in an isolated environment, TestBed is essential for testing angular components 
+
+	describe('AppComponent', () => {
+	   beforeEach(() => {
+		TestBed.configureTestingModule({
+		    declarations : [AppComponent]
+		}).compileComponents();	
+	   });
+	});
+
+How to implement Unit Testing :
+________________________________
+
+it('should return expected data', () => {
+    const data = service.getData();
+    expect(data).toEqual('Expected Data')
+});
+
+
+If you want to implement integration testing like component, Ui, service etc all together then 
+
+
+it('Should integrate component and service', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
+    const service = TestBed.inject(Service);
+
+    expect(component.processData(service.data()).toBe(true);
+});
+
+
+npm install chai --save-dev
+npm install @types/chai --save-dev
+
+
+
+
+
