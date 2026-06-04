@@ -85,6 +85,8 @@ npm install chai --save-dev
 npm install @types/chai --save-dev
 
 
+ng generate service services/CalculatorService
+
 
 
 
