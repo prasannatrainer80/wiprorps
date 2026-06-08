@@ -1,0 +1,62 @@
+Kubernates Tutorial 
+_____________________
+
+   -> It is a open-source container management platform.
+
+
+    -> Automates the deployment, management and scaling of container-based applications
+
+    -> Allows you to group the containers into logical units, called them as PODs and managing their lifecycle across a cluster of machines
+
+    -> Major adv is, automatically restarts failed containers, replaces them when necessary, and reschedules workloads onto healthy nodes to maintain the desired state.
+
+Kubernate Architecture :
+__________________________
+
+It follows a client-server architecture consisting of a control panel(master) and worker nodes. Includes components such as API server, Scheduler, Controller Manager,  etcd for cluster storage.
+
+1) API Server 
+	
+	It is a component of kubernates control pane that 
+contains Kubernate API, It acts as a initial gateway to the cluster
+that listens
+
+2) Scheduler 
+
+	Watches for newly created Pods that have no assigned node
+	Selects the best worker process based on the resource requirement, policy constraints, and hardware/software limits 
+
+3) Controller-Manager 
+
+	Runs controller processes that maintains the "desired state" of the cluster
+
+	Node Controller : Monitors node health
+
+	Replication Controller : Ensures that correct no.of POD replicas are running
+
+4) etcd : 
+
+	It is consistent, high-availability key-value store
+	as it stores the cluster data 
+
+Worker Node Components 
+_______________________
+
+There are 3 processes in every node that are used to schedule and manage those pods. 
+
+(i) Container Runtime 
+
+	It is a software responsible for actually running the 
+	containers.
+
+	It pulls images from a registry and starts/stops the containers
+
+(ii) Kubelet
+
+	An agent that runs on each node in the cluster
+
+(iii) Proxy
+
+	It is a network proxy that maintains network rules on nodes
+	Allows network communication to your Pods from inside or outside of the cluster
+	Reports the health and status of the node back to the API server
