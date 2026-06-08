@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: kubernatesexample-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: kubernatesexample-app
+
+  template:
+    metadata:
+      labels:
+        app: kubernatesexample-app
+
+    spec:
+      containers:
+      - name: spring-container
+        image: kubernates-demo
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 1111

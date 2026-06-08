@@ -1,0 +1,316 @@
+If you're a Java developer and want to learn Kubernetes (K8s) step by step, follow this practical roadmap.
+
+Step 1: Learn Basic Kubernetes Concepts
+
+Understand these components:
+
+Component	Purpose
+Pod	Smallest deployable unit
+Node	Machine where Pods run
+Cluster	Group of Nodes
+Deployment	Manages Pods
+Service	Exposes application
+Namespace	Logical separation
+ConfigMap	External configuration
+Secret	Sensitive data
+Ingress	External HTTP/HTTPS access
+Step 2: Create a Spring Boot Application
+
+Example:
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/")
+    public String hello() {
+        return "Hello Kubernetes";
+    }
+}
+
+Run:
+
+mvn spring-boot:run
+
+Verify:
+
+http://localhost:8080
+Step 3: Package Application
+
+Create JAR:
+
+mvn clean package
+
+Output:
+
+target/demo.jar
+Step 4: Create Dockerfile
+FROM eclipse-temurin:17-jdk
+
+COPY target/demo.jar app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java","-jar","/app.jar"]
+
+Build image:
+
+docker build -t spring-k8s-demo .
+
+Run:
+
+docker run -p 8080:8080 spring-k8s-demo
+Step 5: Install Kubernetes
+Option 1: Docker Desktop
+
+Enable:
+
+Settings → Kubernetes → Enable Kubernetes
+Option 2: Minikube
+
+Install:
+
+choco install minikube
+
+Start:
+
+minikube start
+
+Verify:
+
+kubectl get nodes
+Step 6: Create Deployment YAML
+
+deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: spring-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: spring-app
+
+  template:
+    metadata:
+      labels:
+        app: spring-app
+
+    spec:
+      containers:
+      - name: spring-container
+        image: spring-k8s-demo
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 8080
+
+Apply:
+
+kubectl apply -f deployment.yaml
+
+Check:
+
+kubectl get deployments
+kubectl get pods
+Step 7: Create Service YAML
+
+service.yaml
+
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: spring-service
+
+spec:
+  selector:
+    app: spring-app
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+
+  type: NodePort
+
+Apply:
+
+kubectl apply -f service.yaml
+
+Verify:
+
+kubectl get services
+Step 8: Access Application
+
+Get URL:
+
+minikube service spring-service --url
+
+Or:
+
+kubectl get svc
+
+Open:
+
+http://<IP>:<NodePort>
+Step 9: Scale Application
+
+Current replicas:
+
+kubectl get deployments
+
+Scale to 5 Pods:
+
+kubectl scale deployment spring-deployment --replicas=5
+
+Verify:
+
+kubectl get pods
+Step 10: View Logs
+kubectl get pods
+kubectl logs <pod-name>
+
+Live logs:
+
+kubectl logs -f <pod-name>
+Step 11: Update Application
+
+Build new Docker image:
+
+docker build -t spring-k8s-demo:v2 .
+
+Update deployment:
+
+kubectl set image deployment/spring-deployment \
+spring-container=spring-k8s-demo:v2
+
+Check rollout:
+
+kubectl rollout status deployment/spring-deployment
+Step 12: Rollback
+
+View history:
+
+kubectl rollout history deployment/spring-deployment
+
+Rollback:
+
+kubectl rollout undo deployment/spring-deployment
+Important kubectl Commands
+kubectl get pods
+
+kubectl get deployments
+
+kubectl get services
+
+kubectl describe pod <pod-name>
+
+kubectl logs <pod-name>
+
+kubectl delete pod <pod-name>
+
+kubectl delete deployment spring-deployment
+
+kubectl delete service spring-service
+Real Project Flow
+Spring Boot Application
+        ↓
+Maven Package
+        ↓
+Docker Image
+        ↓
+Push to Docker Hub
+        ↓
+Kubernetes Deployment
+        ↓
+Service
+        ↓
+Ingress
+        ↓
+Production
+
+For Java/Spring Boot interviews, focus on Pod, Deployment, Service, ConfigMap, Secret, Ingress, Scaling, Rolling Updates, and kubectl commands, as these are the most commonly asked Kubernetes topics.
+
+where to create yaml file
+
+You can create the Kubernetes YAML files anywhere in your project, but the common practice is to keep them in a separate folder inside your Spring Boot project.
+
+Example Project Structure
+SpringBootProject/
+│
+├── src/
+├── target/
+├── pom.xml
+├── Dockerfile
+│
+└── k8s/
+    ├── deployment.yaml
+    ├── service.yaml
+    └── configmap.yaml
+Create the Files
+
+From the project root:
+
+mkdir k8s
+
+Create:
+
+k8s/deployment.yaml
+k8s/service.yaml
+deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-app
+  template:
+    metadata:
+      labels:
+        app: spring-app
+    spec:
+      containers:
+      - name: spring-container
+        image: spring-k8s-demo
+        ports:
+        - containerPort: 8080
+service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-service
+spec:
+  selector:
+    app: spring-app
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: NodePort
+Apply the YAML Files
+
+Open Command Prompt or Terminal in the project directory:
+
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+
+Or apply all files in the folder:
+
+kubectl apply -f k8s/
+In IntelliJ IDEA
+Right-click the project.
+New → Directory → k8s
+Right-click k8s → New → File
+Create:
+deployment.yaml
+service.yaml
+Paste the YAML content and save.
+
+After creating the files, run:
