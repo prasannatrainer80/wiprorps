@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: springbootjenkins-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: springbootjenkins-app
+
+  template:
+    metadata:
+      labels:
+        app: springbootjenkins-app
+
+    spec:
+      containers:
+      - name: springbootjenkins-container
+        image: springbootjenkins-demo
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 2222
