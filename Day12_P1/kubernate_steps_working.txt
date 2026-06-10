@@ -46,7 +46,7 @@ Verify:
 
 docker images
 5. Test Docker Container
-docker run -d -p 8080:8080 --name spring-container springboot-k8s-demo
+docker run -d -p 8888:8888 --name spring-container springboot-k8s-demo
 
 Test:
 
