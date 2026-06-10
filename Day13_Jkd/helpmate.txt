@@ -1,0 +1,3 @@
+environment {
+    KUBECONFIG = 'C:\\Users\\Admin\\.kube\\config'
+}
