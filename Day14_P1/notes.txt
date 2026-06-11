@@ -1,0 +1,172 @@
+Cloud Computing : 
+
+     Is an internet-based computing service in which large groups of remote servers are networked to allow centralized data storage, and online access to computer services or resources. 
+
+	Using Cloud computing, organizations can use shared computing and storage resources rather than building, operating, and improving infrastructure on their own.
+
+Cloud Computing is a model that enables features as :
+______________________________________________________
+
+  -> Users can provision and release resources on-demand
+
+  -> Resources can be scaled up and down automatically, depending on the load
+
+  -> Resources are accessible over a network with proper security
+
+  -> Cloud Service providers can enable a pay-as-you-go model, where customers are charged based on the type of resources and per usage. 
+
+Types of Clouds :
+__________________
+
+1) Deployment Model
+
+2) Service Model
+
+There are various cloud models as
+
+-> public cloud
+
+	In Public Cloud, the third party service providers make resources and services available to their customers via internet. Customers data and related security is with the service provider's owned infrastructure.
+
+-> private cloud
+
+	It also provides almost similar features, but the data and services are managed by the organization or by the third party only for the customer's organization. In this type of cloud, the major control is over the infrastructure, so security related issues are minimized. 
+
+-> hybrid cloud
+
+    It is a combination of both private and public cloud, the decision to run on private or public cloud usually depends on various parameters like sensitivity of data and applications, industry certifcations
+
+There are various types of service models available in cloud as
+
+-> IAAS (Infrastructure as a Service)
+
+	Provides basic infrastructure such as virtual machines, storage, networking and operating systems. You can manage OS, runtime, applications and data
+
+Examples : AWS EC2
+	   Microsoft Virtual Machines
+	   Google Compute Engine
+
+-> PAAS (Platform As as a Service)
+
+	Provides a platform for developing and deploying applications. The cloud provider manages the infrastructure and operating system. 
+
+	It manages 
+
+	    Application Code and Data
+
+Examples :
+
+	Microsoft App Service
+	Google App Engine
+	Salesforce Platform Services
+		
+-> SAAS (Software as a Service) 
+	Provides complete software applications over the internet. Users simply use the application. 
+
+Examples : 
+
+	Google Gmail
+	Office 365
+	Salesforce CRM
+
+Azure Fundamentals 
+___________________
+
+Azure is a public and private cloud platform that enables developers and IT professionals to build, deploy and manage applications. It relies on virtualization, where hardware runs on virtual machines. 
+
+Azure Architecture 
+____________________
+
+	Azure relies on virtualization and software-defined networking(SDN) to optimize resource usage and performance. 
+
+Operations possible in Azure 
+_____________________________
+
+
+    -> Deployment of Applications
+
+	You can develop and deploy the application in the azure cloud by the service called Azure App Service and Azure functions after deploying the applications end users can access 
+
+    -> Identity and Access Management
+
+		Application and data which deployed and stored in the Azure can be secured with the help of identity and access management. Its commonly used for single sign-on, multi-factor authentication, and identity governance. 
+
+    -> Data Storage and Databases
+
+	You can store and data in Azure in service. Azure Sql Database for relational databases. 
+
+    -> DevOps and CI/CD : will provide some tools like including version control, build automation and release management and application monitoring.
+
+The providers of Azure are 
+__________________________
+
+	-> AWS (Amazon Web Services) 
+
+	-> GCP (Google Cloud Platform)
+
+	-> IBM Cloud
+
+	-> OCI (Oracle Cloud Infrastructure) 
+
+Azure App Service is 
+
+PAAS (Platform As a Service) Offering from Azure allows you to deploy web applications, REST APIs and mobile backends. 
+
+Features : 
+
+	Deploy Web applications easily
+	Automatic Scaling
+	Load Balancing
+	CI/CD Integrations 
+	
+
+Basic Azure Services : 
+_______________________
+
+Analytics
+Compute
+Containers
+Databases
+Devops
+I'm Console -> This is the heart for Azure Services. It contains 
+
+	List of Users with permissions, any PAT (Public Access Tokens) 
+	What platform and services they are going to access. 
+
+It compute services provides the building level products, which dictates and determines the execution of an application in Azure
+
+Advantages : 
+_____________
+
+	Impart scalabilty and security 
+	Connect privately and securely to cloud with Azure 
+	Distribute user traffic to specific endpoints 
+	Obtain unmatched availability and performance
+	
+AWS is a cloud service from Amazon, which provides services in the form of building blocks, these building blocks can be used to create and deploy any type of application in the cloud.
+
+These services or building blocks are designed to work with each other and result in applications which are sophisticated and scalable.
+
+We have major component known as Compute Service 
+
+  The Compute domain includes services related to compute workloads, it includes
+
+	-> EC2 (Elastic Compute Cloud)
+	-> Lambda
+	-> LightSail
+
+Aws Data Services 
+
+	-> Amazon RDS 
+
+which allows you to create any mongo/MySQL or other databases distributed, where we can use across various places. 
+
+Amazon EC2 (Elastic Compute Cloud) is a web service interface that provides resizable compute capacity in the AWS cloud
+
+Amazon EC2 Eliminates needs to invest in hardware up front
+
+EC2 instances can be resized, and no.of instances scaled up and down as per our requirement
+
+These instances can be launched in one or more geographical locations
+
+
