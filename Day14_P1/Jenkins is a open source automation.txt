@@ -1,0 +1,142 @@
+Jenkins is a open source automation server used to build, test and deploy software efficiently. It is widely used in DevOps to automate 
+Continuous Integration (CI) and Continuous Delivery (CD) pipeline.
+
+	-> Automates build, test and deployment processes
+
+	-> Integrates with various tools like Git, Maven and Docker
+
+	-> Improves development speed, reliability and software
+				quality
+
+Before Jenkins
+
+	-> Code integration happens late, causing major conflicts
+
+	-> Testing was delayed until development was complete
+
+	-> Bug fixing became time-consuming and frustrating 
+
+After Jenkins 
+
+	-> Automates build and testing whenever code is commited
+
+	-> Detects bugs early in development cycle
+
+	-> Enables faster and more reliable software releases
+
+	-> Allows developers to integrate code frequently without 
+		conflicts 
+
+Devops Life Cycle 
+__________________
+
+1) Plan (Dev) : Define the requirements, create roadmaps, and organize tasks
+
+2) Code (Dev) : Developers write the code and commit it to a shared repository
+
+3) Build (Dev) : Once code committed, its pulled and compiled into an executable format. 
+
+4) Test (Dev) : Tested for bugs, security issues and performance issues
+
+5) Release (Dev) : Code passed testing and is ready to be deployed, this phase manages the versioning and approval.
+
+6) Deploy (Ops) : The application pushed to the production servers
+
+7) Operate (Ops)
+
+8) Monitor (Ops) 
+
+_______________________________________________________________
+
+What is Continuous Integration (CI) 
+
+	CI automates the process of merging code changes into a central repo, it includes automated building, quality checks, and storage
+
+	Tools : Jenkins, GitHub, Maven and SonarQube
+
+What is Continuous Development
+
+What is Continuous Development (CD) 
+
+	This state focuses on the iterative planning and coding of software in small, manageable units, it allows for rapid updates and early bug detection. 
+
+What is Continuous Testing 
+
+	Automated tests are executed every time the code changes, 
+
+The tools used for automated testing are
+
+	Selenium, Junit
+
+Jenkins Architecture : 
+______________________
+
+1) Jenkins Controller
+
+	It acts as central hub for Jenkins env
+	Schedules build jobs and assign tasks to agents
+	
+
+2) Jenkins Agent
+	
+	Responsible for executing all the tasks (building, tesing
+etc) assigned by controller
+
+3) Jenkins Node
+
+	Provides an env. to run the Jenkins Jobs 
+
+4) Jenkins Job
+	
+	A single automated task, such as a script execution or a project build.
+
+5) Jenkins Plugins
+
+	Allows you to add plugins w.r.t. env like java/docker etc
+
+6) Jenkins Pipeline
+
+	A suite of plugins that lets you define the entire CI/CD process via a script. (Jenkinsfile) 
+
+The basic workflow we have for Jenkins are 
+
+	-> Code Commit : Developers push changes to a version control system like git
+
+	-> Build : Jenkins compiles the code and generates artifacts
+
+	-> Test : Executes the automated tests (unit, integration or system tests)
+
+	-> Deployment : Deploys the tested build to staging or production environments.
+
+The heart for Jenkins are pipelines
+
+Automates CI/CD workflows with declarative or scripted pipelines
+Ensure smooth transitions from code commit to production deployment.
+
+The sample Jenkins file w.r.t. Java Env is 
+
+pipeline {
+    agent any
+
+    tools {
+        jdk 'Java17'
+        maven 'Maven3'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                bat 'mvn clean package'
+            }
+        }
+         stage('Run App') {
+    steps {
+        bat '''
+        start "" java -jar target\\JenkinsDone-0.0.1-SNAPSHOT.jar
+               '''
+    }
+}
+
+    }
+
+}
